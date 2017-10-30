@@ -206,11 +206,11 @@ h1 {
 h2 {
     font-family: "Open Sans", Arial, Verdana, sans-serif;
     font-size: 25px;
-    line-height: 49px;
+    line-height: 40px;
     font-weight: 400;
     color: #2e2f31;
     text-align: center;
-    padding: 0 0 17px 0;
+    padding: 3px 0 23px 0;
 }
 
 h3 {
@@ -1215,7 +1215,7 @@ a:active {
 }
 
 .desc-bottom-row {
-    padding: 63px 0 17px 0;
+    padding: 60px 0 17px 0;
 }
 
 .desc-bottom-row .col {
@@ -1239,7 +1239,7 @@ a:active {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    margin: 0 2% 0 0;
+    margin: 4px 2% 4px 0;
 }
 
 .soc-visits li:after {
@@ -1304,8 +1304,17 @@ a:active {
     padding: 0 11px 0 7px;
 }
 
-.desc-bottom-row .col-2  p {
-    padding: 0;
+.desc-bottom-row .col-2 p {
+    padding: 9px 0;
+    font-family: "Open Sans", Arial, Verdana, sans-serif;
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #bdbdca;
+}
+
+.desc-bottom-row .col-2 p span {
+    color: #8a8a92;
 }
 
 .tags {
@@ -1619,10 +1628,8 @@ a:active {
 
 .banner img {
     display: block;
-    width: auto;
     height: auto;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
 }
 
 .banner-info {
@@ -1686,10 +1693,14 @@ a:active {
     margin-bottom: 36px;
 }
 
+.country-two-cols .two-cols-article .col-1 {
+    padding-right: 3% !important;
+}
+
 .flag-img {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: auto;
-    max-width: 370px;
     border: none;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
