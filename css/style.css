@@ -2224,3 +2224,9 @@ p.copy {
     color: #5cb6d0;
     padding: 13px 0;
 }
+
+/*-----------*/
+
+.ie .two-cols-block {
+    overflow: hidden;
+}

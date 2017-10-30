@@ -97,6 +97,33 @@ $(document).ready(function() {
 
         });
 
+        $(this).keydown(function(eventObject){
+
+            if (eventObject.which == 27) {
+
+                if ( $(".resp-nav").is(":visible") ) {
+
+                    $(".resp-nav").fadeOut(300);
+                    $(".respmenubtn").removeClass("active");
+
+                }
+
+            }
+
+        });
+
+    });
+
+    $(function() {
+
+        if (navigator.appVersion.toUpperCase().indexOf("MSIE") != -1 ||
+            navigator.appVersion.toUpperCase().indexOf("TRIDENT") != -1 ||
+            navigator.appVersion.toUpperCase().indexOf("EDGE") != -1) {
+
+            $("body").addClass("ie");
+
+        }
+
     });
 
     function getCommentsHeight() {
