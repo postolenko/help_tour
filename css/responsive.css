@@ -314,10 +314,6 @@
 
 @media only screen and (max-width: 600px) {
 
-	.inner-row {
-	    padding: 0 5px;
-	}
-
 	/*-- Section 1 Main Page --*/
 
 	.photo-th {
@@ -409,7 +405,11 @@
 	}
 
 	.top_line {
-	    padding: 0 5px;
+	    padding: 0 10px;
+	}
+
+	.inner-row {
+	    padding: 0 10px;
 	}
 
 	/*-- Section 1 Main Page --*/
@@ -425,19 +425,19 @@
 	}
 
 	.photo-th {
-	    padding: 15px 5px;
+	    padding: 15px 10px;
 	}
 
 	.gallery .gal-th {
-	    padding: 15px 5px;
+	    padding: 15px 10px;
 	}
 
 	.gallery .col-2 .gal-th {
-	    padding: 15px 5px;
+	    padding: 15px 10px;
 	}
 
 	.country-cards .country-card {
-	    padding: 15px 5px;
+	    padding: 15px 10px;
 	}
 
 	/*-- /Section 1 Main Page --*/
