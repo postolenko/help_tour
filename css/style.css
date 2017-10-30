@@ -388,17 +388,19 @@ a:active {
 }
 
 .header-site .col {
-    padding: 10px 0;
+    padding: 6px 0;
 }
 
 .header-site .col-1 {
-    width: 22%;
-    padding-top: 18px;
+    width: 15%;
+    padding-top: 19px;
     padding-right: 1%;
+    position: relative;
+    z-index: 5;
 }
 
 .header-site .col-2 {
-    width: 78%;
+    width: 85%;
     padding-left: 1%;
     text-align: right;
 }
@@ -406,7 +408,7 @@ a:active {
 .header-site .col-2 .col-2-col {
     display: inline-block;
     vertical-align: middle;
-    margin: 0 0 0 4.5%;
+    margin: 3px 0 3px 4.5%;
 }
 
 .logo {
@@ -569,6 +571,98 @@ a:active {
     color: #fff;
     box-shadow: 0 0 20px 1px #e94f5e,inset 0 1px 0 0 rgba(255, 255, 255, .25);
 }
+
+/* ----- Responsive Menu Button ------ */
+
+.respmenubtn-box {
+    /*display: block;*/
+    display: none;
+    width: 40%;
+    height: 42px;
+    position: relative;
+    top: 1px;
+    text-align: right;
+    z-index: 5;
+}
+
+.respmenubtn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 47px;
+    height: 35px;
+    background: transparent;
+    cursor: pointer;
+    z-index: 8;
+    border: 1px solid transparent;
+}
+
+.respmenubtn span {
+    display: block;
+    width: 37px;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    margin: 0 auto 5px auto;
+
+    -webkit-transition-property: transform, border, background;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: transform, border, background;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: transform, border, background;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: transform, border, background;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: transform, border, background;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.respmenubtn span:last-child {
+    margin: 0 auto;
+}
+
+.respmenubtn:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: transparent;
+}
+
+.respmenubtn.active span {
+    position: relative;
+    width: 35px;
+    top: 2px;
+    left: 0;
+}
+
+.respmenubtn.active span:last-child {
+    display: none;
+}
+
+.respmenubtn.active span:first-child {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: 3px 0 0 0;
+    position: relative;
+    top: 4px;
+    left: 5px;
+}
+
+.respmenubtn.active span:nth-child(2) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* ----- / Responsive Menu Button ------ */
 
 /*-------------------------------------------*/
 /* ----- CONTENT ------ */

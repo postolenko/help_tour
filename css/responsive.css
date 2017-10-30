@@ -1,19 +1,274 @@
 @media only screen and (max-width: 1280px) {
 
-
+	.row {
+		padding: 0 2%;
+	}
 
 }
 
 
 @media only screen and (max-width: 1024px) {
 
+	/*-- Header --*/
+
+	.header-site .col-2 .col-2-col {
+	    margin: 3px 0 3px 1%;
+	}
+
+	.main-nav {
+		margin: 0;
+	}
+
+	.main-nav li {
+	    padding: 10px 9px;
+	}
+
+	/*-- /Header --*/
+
+}
+
+
+@media only screen and (max-width: 900px) {
+
+	/*-- Header --*/
+
+	.header-site .search-block {
+	    width: 183px;
+	}
+
+	.header-site .red-pill {
+	    min-width: 142px;
+	}
+
+	/*-- /Header --*/
+
+	/*-- Section 1 Main Page --*/
+
+	.photo-thumnails {
+	    margin: 0 0 22px 0;
+	}
+
+	.promo-block .col {
+	    padding: 5px 0 15px 0;
+	}
+
+	.promo-block .col-1,
+	.promo-block .col-2 {
+	    width: 100%;
+	    padding-left: 0%;
+	    text-align: left;
+	}
+
+	.photo-th {
+	    width: 50%;
+	}
+
+	/*-- /Section 1 Main Page --*/
+
+	/*-- Section 2 Main Page --*/
+
+	.gallery .col-1 {
+	    width: 100%;
+	}
+
+	.gallery .col-2 {
+	    width: 100%;
+	    font-size: 0;
+	    line-height: 0;
+	}
+
+	.gal-th.big-photo .inner {
+	    height: 245px;
+	}
+
+	.gallery .col-2 .gal-th {
+		display: inline-block;
+		vertical-align: top;
+		width: 50%;
+	    padding: 15px;
+	}
+
+	/*-- /Section 2 Main Page --*/
+
+	/*-- Footer--*/
+
+	.footer-row-1 .col-1 {
+	    width: 100%;
+	    padding-right: 0;
+	    text-align: center;
+	}
+
+	.footer-row-1 .col-2 {
+		width: 100%;
+	    padding-left: 0;
+	    text-align: center;
+	}
+
+	/*-- /Footer--*/
 
 }
 
 
 @media only screen and (max-width: 768px) {
 
+	/*-- Header --*/
 
+	.header-site .col-1 {
+	    width: 60%;
+	    padding-top: 9px;
+	}
+
+	.respmenubtn-box {
+	    display: block;
+	}
+
+	.header-site .col-2 .col-2-col {
+		display: block;
+		width: 100%;
+	    margin: 10px auto;
+	    text-align: center;
+	}
+
+	.search-block {
+		max-width: 320px;
+	}
+
+	.header-site .red-pill {
+		width: 100%;
+		max-width: 320px;
+	}
+
+	.header-site .resp-nav {
+		/*display: block;*/
+		display: none;
+		width: 100%;
+		height: 100vh;
+		padding: 75px 1%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 3;
+		background: rgb(19, 167, 209);
+	}
+
+	.header-site .main-nav-block {
+	    width: 100%;
+	}
+
+	.header-site .main-nav li {
+	    display: block;
+	    padding: 0;
+	}
+
+	.header-site .main-nav li a {
+		display: block;
+	    font-size: 16px;
+	    line-height: 39px;
+	    font-weight: 600;
+	}
+
+	.header-site .main-nav li a:link,
+	.header-site .main-nav li a:visited {
+		color: #ffffff;
+		background: rgba(255, 255, 255, 0);
+	    border-bottom: none;
+	}
+
+	.header-site .main-nav li a:active,
+	.header-site .main-nav li a.active {
+		color: #13a7d1;
+		background: rgba(255, 255, 255, 1);
+	    border-bottom: none;
+	}
+
+	.header-site .main-nav li a:hover {
+		color: #13a7d1;
+		background: rgba(255, 255, 255, 1);
+	    border-bottom: none;
+	}
+
+	/*-- /Header --*/
+
+	/*-- Section 2 Main Page --*/
+
+	.country-cards .country-card {
+	    width: 50%;
+	}
+
+	/*-- /Section 2 Main Page --*/
+
+	/*-- Footer --*/
+
+	.seo-block {
+	    width: 33.33%;
+	}
+
+	/*-- /Footer --*/
+
+}
+
+@media only screen and (max-width: 600px) {
+
+	/*-- Section 1 Main Page --*/
+
+	.photo-th {
+		display: block;
+	    width: 100%;
+	    margin: 0 auto;
+	}
+
+	/*-- /Section 1 Main Page --*/
+
+	/*-- Section 2 Main Page --*/
+
+	.gallery .col-2 .gal-th {
+	    width: 100%;
+	}
+
+	.gal-th.big-photo .photo-desc {
+	    padding: 6px 3%;
+	}
+
+	.gal-th .photo-desc {
+	    padding: 3px 3%;
+	}
+
+	.gal-th.big-photo p.th-desc {
+	    font-size: 17px;
+	    line-height: 23px;
+	}
+
+	.country-cards .country-card {
+	    width: 100%;
+	}
+
+	.country-card .country-desc {
+	    padding: 17px 3% 4px 3%;
+	}
+
+	/*-- /Section 2 Main Page --*/
+
+	/*-- Footer --*/
+
+	.footer-row-1 {
+		padding: 18px 0 27px 0;
+	}
+
+	.footer-row-1 .col {
+	    padding: 0;
+	}
+
+	.footer-row-1 .col-1-col {
+		width: 100%;
+	    margin: 12px 0;
+	}
+
+	.footer-row-1 .col-2-col {
+		width: 100%;
+	    margin: 6px 0;
+	}
+
+	/*-- /Footer --*/
 
 }
 
@@ -21,6 +276,63 @@
 
 @media only screen and (max-width: 480px) {
 
+	h1 {
+	    font-size: 24px;
+	    line-height: 34px;
+	}
 
+	/*-- Section 1 Main Page --*/
+
+	.promo-block p {
+	    padding: 11px 0 0 0;
+		font-size: 15px;
+		line-height: 17px;
+	}
+
+	.search_2-block input {
+	    padding: 0 47px 0 21px;
+	}
+
+	.photo-th {
+	    padding: 15px 5px;
+	}
+
+	.gallery .gal-th {
+	    padding: 15px 5px;
+	}
+
+	.gallery .col-2 .gal-th {
+	    padding: 15px 5px;
+	}
+
+	.country-cards .country-card {
+	    padding: 15px 5px;
+	}
+
+	/*-- /Section 1 Main Page --*/
+
+}
+
+@media only screen and (max-width: 350px) {
+
+/*-- Footer --*/
+
+	.seo-block {
+	    width: 50%;
+	}
+
+/*-- /Footer --*/
+
+}
+
+@media only screen and (min-width: 769px) {
+
+	/*-- Header --*/
+
+	.resp-nav {
+		display: block !important;
+	}
+
+	/*-- /Header --*/
 
 }

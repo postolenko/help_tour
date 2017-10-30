@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
     var setFooterPositionInterval;
     var contentCoor;
     var footerCoor;
@@ -8,8 +7,6 @@ $(document).ready(function() {
     // ----------------------------
 
     getCommentsHeight();
-
-    getTopBorderLine();
 
     getFooterPosition();
 
@@ -29,8 +26,6 @@ $(document).ready(function() {
         // -----------------
 
         getCommentsHeight();
-
-        getTopBorderLine();
 
     });
 
@@ -70,25 +65,25 @@ $(document).ready(function() {
 
     });
 
-    function getTopBorderLine() {
+    $(function() {
 
-        // $("section").each(function() {
+        $(".respmenubtn").click(function() {
 
-        //     if( $(this).hasClass("border") && $(this).find(".top_line").length == 0 ) {
+            if( $(".resp-nav").is(":hidden") ) {
 
-        //         $(this).prepend("<span class='top_line'></span>");
+                $(".resp-nav").fadeIn(400);
+                $(this).addClass("active");
 
-        //     }
+            } else {
 
-        //     var topLine = $(this).find(".top_line");
+                $(".resp-nav").fadeOut(400);
+                $(this).removeClass("active");
 
-        //     topLine.css({
-        //         "width" : $(".inner-row").width() + "px"
-        //     });
+            }
 
-        // });
+        });
 
-    }
+    });
 
     function getCommentsHeight() {
 
@@ -113,7 +108,6 @@ $(document).ready(function() {
         });
 
     }
-
 
     function getFooterPosition() {
 
