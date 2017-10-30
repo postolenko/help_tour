@@ -1,4 +1,18 @@
+$(window).on('load', function () {
+    var $preloader = $('.volosunov'),
+        $spinner = $preloader.find('.spinner');
+    $spinner.delay(400).fadeOut('slow');
+    $preloader.delay(400).fadeOut('slow');
+    $('.mov1').addClass('animated');
+});
+
 $(document).ready(function() {
+
+    var parentBlock;
+    var commentsHeight;
+    var bottomCoord;
+
+    // ---------------------------
 
     var setFooterPositionInterval;
     var contentCoor;
@@ -32,9 +46,9 @@ $(document).ready(function() {
 
     $(function() {
 
-        var parentBlock;
-        var commentsHeight;
-        var bottomCoord;
+        // var parentBlock;
+        // var commentsHeight;
+        // var bottomCoord;
 
         $(".show-comments").click(function(e) {
 
