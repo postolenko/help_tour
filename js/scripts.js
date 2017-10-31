@@ -14,6 +14,13 @@ $(document).ready(function() {
 
     // ---------------------------
 
+    var popupName;
+    var popupBlock;
+    var popupBox;
+    var popupOffsetTop;
+
+    // ---------------------------
+
     var setFooterPositionInterval;
     var contentCoor;
     var footerCoor;
@@ -40,6 +47,8 @@ $(document).ready(function() {
         // -----------------
 
         getCommentsHeight();
+
+        getPopupPosition();
 
     });
 
@@ -126,6 +135,68 @@ $(document).ready(function() {
 
     });
 
+    $(function() {
+
+        $(".show_popup").click(function(e) {
+
+            e.preventDefault();
+
+            popupName = $(this).attr("data-popup");
+            popupBlock = $("[data-popup-name = '"+ popupName +"']");
+
+            popupBlock.fadeIn(400);
+
+            getPopupPosition();
+
+        });
+
+         $(this).keydown(function(eventObject){
+
+            if (eventObject.which == 27) {
+
+                if ( popupBlock.is(":visible") ) {
+
+                    popupBlock.fadeOut(300);
+
+                }
+
+            }
+
+        });
+
+        $(".close-popup").click(function() {
+
+            popupBlock = $(this).closest(".popup-wrapp");
+
+            popupBlock.fadeOut(300);
+
+        });
+
+        $(document).mouseup(function (e){
+
+            if( $(".popup-wrapp").length > 0 ) {
+
+                $(".popup-wrapp").each(function() {
+
+                    hide_element = $(this).find(".popup");
+
+                    hide_element = $(".popup-wrapp").find(".popup");
+
+                    if (!hide_element.is(e.target)
+                        && hide_element.has(e.target).length === 0) {
+
+                            $(this).fadeOut(300);
+
+                    }
+
+                });
+
+            }
+
+        });
+
+    });
+
     function getCommentsHeight() {
 
         $(".comments").each(function() {
@@ -147,6 +218,36 @@ $(document).ready(function() {
             }
 
         });
+
+    }
+
+    function getPopupPosition() {
+
+        if( $(".popup-wrapp").length > 0 ) {
+
+            $(".popup-wrapp").each(function() {
+
+                popupBox = $(this).find(".popup");
+
+                if( $(window).height() > popupBox.outerHeight() ) {
+
+                    popupOffsetTop = ( $(window).height() - popupBox.outerHeight() ) / 2;
+
+                } else {
+
+                    popupOffsetTop = 10;
+
+                }
+
+                popupBox.css({
+
+                    "margin-top" : popupOffsetTop + "px"
+
+                });
+
+            });
+
+        }
 
     }
 

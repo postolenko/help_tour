@@ -8,6 +8,8 @@
 
 	$(window).on("load",function(){
 
+		$(".scroll").mCustomScrollbar();
+
 		getScrollBar();
 
 	});
@@ -24,7 +26,7 @@
 
 		if( bodyWidth <= 768 ) {
 
-			$(".resp-nav").mCustomScrollbar();
+			$(".resp-nav").mCustomScrollbar();			
 
 		} else {
 

@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/popup_style.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
@@ -36,6 +37,37 @@
 	</span>
 </div>
 <!-- PRELOADER -->
+
+
+<!-- Popup -->
+
+<div class="popup-wrapp scroll" data-popup-name = "callback_popup">
+	<div class="popup">
+		<button class="close-popup">
+			<span></span>
+			<span></span>
+		</button>
+		<h3>Купить место</h3>
+		<p class="price">от 300р</p>
+		<p>все заявки обсуждатся индивидуально, напишите нам для обсуждения вариантов рекламы</p>
+		<div class="form-block">
+			<div class="input-block">
+				<input type="text" placeholder="Имя" />
+			</div>
+			<div class="input-block">
+				<input type="email" placeholder="E-mail" />
+			</div>
+			<div class="input-block">
+				<textarea placeholder="Комментарий, укажите место и срок аренды"></textarea>
+			</div>
+			<div class="submit-block">
+				<button type="submit" class="red-pill">Подать заявку</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- /Popup -->
 
 <div class="wrapper">
 
@@ -315,14 +347,14 @@
 						</div>
 						<div class="col col-2 right banners">
 							<div class="banner-block">
-								<a href="#" class="banner">
-									<img src="img/banner_bg.jpg" alt="" />
+								<a href="#" class="banner show_popup" data-popup = "callback_popup">
+									<img src="img/banner_bg.jpg" alt="" />									
 								</a>
-								<div class="banner-info">
+								<div class="banner-info show_popup" data-popup = "callback_popup">
 									<p>Здесь могла бы быть<br />
 									<span class="blue">ваша реклама</span></p>
 									<a href="#" class="blue-pill">Купить место</a>
-								</div>
+								</div>								
 							</div>
 						</div>
 					</div>
@@ -363,7 +395,7 @@
 							<div class="main-nav-block col-2-col">
 								<ul class="main-nav">
 									<li><a href="#">О визах гражданам РФ</a></li>
-									<li><a href="#">Карты</a></li>	 				          
+									<li><a href="#">Карты</a></li>  
 								</ul>
 							</div>
 							<div class="search-block col-2-col">
