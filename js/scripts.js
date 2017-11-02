@@ -9,8 +9,7 @@ $(window).on('load', function () {
 $(document).ready(function() {
 
     var parentBlock;
-    var commentsHeight;
-    var bottomCoord;
+    var commentSlidingBlock;
 
     // ---------------------------
 
@@ -27,7 +26,7 @@ $(document).ready(function() {
 
     // ----------------------------
 
-    getCommentsHeight();
+    // getCommentsHeight();
 
     getFooterPosition();
 
@@ -46,7 +45,7 @@ $(document).ready(function() {
 
         // -----------------
 
-        getCommentsHeight();
+        // getCommentsHeight();
 
         getPopupPosition();
 
@@ -56,33 +55,44 @@ $(document).ready(function() {
     $(function() {
 
         // var parentBlock;
-        // var commentsHeight;
-        // var bottomCoord;
+        // var commentSlidingBlock;
+
+        $(".comment-wrapp").each( function() {
+
+            if( $(this).find(".comment-answers .comment").length > 0 ) {
+
+                $(this).find(".show-comments").css({
+                    "display" : "block"
+                });
+
+            } else {
+
+                $(this).find(".show-comments").css({
+                    "display" : "none"
+                });
+
+            }
+
+        });
 
         $(".show-comments").click(function(e) {
 
             e.preventDefault();
 
-            parentBlock = $(this).closest(".comments");
-            commentsHeight = $(this).closest(".commets-inner").height();
+            parentBlock = $(this).closest(".comment-wrapp");
+            commentSlidingBlock =  parentBlock.find(".comment-answers");
 
-            if( parentBlock.height() >= commentsHeight ) {
+            if( commentSlidingBlock.is(":visible") ) {
 
-                bottomCoord = parentBlock.find(".comment:eq(1)").offset().top - parentBlock.offset().top;
+                commentSlidingBlock.slideUp(400);
                 $(this).removeClass("active");
-                parentBlock.removeClass("active");
 
             } else {
 
-                bottomCoord = commentsHeight;
+                commentSlidingBlock.slideDown(400);
                 $(this).addClass("active");
-                parentBlock.addClass("active");
 
             }
-
-            parentBlock.animate({
-                "height" : bottomCoord + "px"
-            }, 400);
 
         });
 
@@ -197,29 +207,29 @@ $(document).ready(function() {
 
     });
 
-    function getCommentsHeight() {
+    // function getCommentsHeight() {
 
-        $(".comments").each(function() {
+    //     $(".comments").each(function() {
 
-            bottomCoord = $(this).find(".comment:eq(1)").offset().top - $(this).offset().top;
+    //         bottomCoord = $(this).find(".comment:eq(1)").offset().top - $(this).offset().top;
 
-            if( $(this).hasClass("active") ) {
+    //         if( $(this).hasClass("active") ) {
 
-                $(this).css({                    
-                    "height" : "auto"
-                });
+    //             $(this).css({                    
+    //                 "height" : "auto"
+    //             });
 
-            } else {
+    //         } else {
 
-                $(this).css({
-                    "height" : bottomCoord + "px"
-                });
+    //             $(this).css({
+    //                 "height" : bottomCoord + "px"
+    //             });
 
-            }
+    //         }
 
-        });
+    //     });
 
-    }
+    // }
 
     function getPopupPosition() {
 
